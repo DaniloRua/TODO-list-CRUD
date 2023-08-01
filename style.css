@@ -25,6 +25,13 @@ body{
 .header-img{
 background-image: url();
 }
+.todo-inputs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
 .todo-title{
     font-size: 35px;
     background-color: hsla(209, 83%, 74%, 0.764);
@@ -38,14 +45,8 @@ background-image: url();
     background-color: #fff;
     background-size: 100% 1.2em;
     background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-                      -webkit-linear-gradient(#eee .05em, transparent .05em);
-    background-image: -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-                      -moz-linear-gradient(#eee .05em, transparent .05em);
-    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-                      linear-gradient(#eee .05em, transparent .05em);
-    -pie-background: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px) 0 0 / 100% 1.2em,
-                     linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
-    behavior: url(/pie/PIE.htc);
+    -webkit-linear-gradient(#eee .05em, transparent .05em);
+  
 
     min-width: 80%;
     height: 90vh;
@@ -58,15 +59,19 @@ background-image: url();
 }
 
 .form-input {
+    margin: 0.3rem;
     border: none;
     outline: none;
     border-bottom: dashed 0.2px;
     background-color: hsla(209, 83%, 74%, 0.764);
+    width: 15rem;
+    height: 1.9rem;
+    font-size: 22px;
 
 
 }
 
-.buttons{
+.update-button, .create-button{
     font-size: 1.5rem;
     padding: 0;
     transform: rotate(5deg);
@@ -81,24 +86,66 @@ background-image: url();
     
 }
 
-.buttons span {
+.update-button span, .create-button span {
     background: #f1f5f8;
     display: block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 2px solid hsl(198, 1%, 29%);
 }
-.buttons:active   {
+.update-button:active, .create-button:active  {
     transform: translateY(6px);
     padding-bottom: 0px;
     outline: 0;
 }
-.buttons:after{
+.update-button:after, .create-button:after{
     transform: translateY(6px);
 }
 
-
-.buttons:hover{
+.update-button:hover, .create-button:hover{
 
     background-color: hsla(209, 61%, 50%, 0.764);
 }
+@media only screen and (max-width: 600px) {
+    body {
+        
+     
+    }
+    .button{
+        display: flex;
+        font-size: 20px;
+        
+    }
+
+    .todo-container{
+        background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 10px, transparent 81px),
+        -webkit-linear-gradient(#eee .05em, transparent .15em);
+    
+    }
+
+    .todo-inputs{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    
+    }
+    
+.form-input {
+    margin: 0.3rem;
+    border: none;
+    outline: none;
+    border-bottom: dashed 0.2px;
+    background-color: hsla(209, 83%, 74%, 0.764);
+    width: 11rem;
+    height: 1.9rem;
+    font-size: 22px;
+
+
+}
+
+    .todo-title{
+        font-size: 25px;
+      
+    }
+  }
