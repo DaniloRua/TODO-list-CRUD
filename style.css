@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+
+*{
+
+    font-family: 'gochi hand', cursive;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(209, 83%, 74%, 0.764);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.header-img{
+background-image: url();
+}
+.todo-title{
+    font-size: 35px;
+    background-color: hsla(209, 83%, 74%, 0.764);
+    -webkit-transform: rotate(2deg);
+}
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    background-color: #fff;
+    background-size: 100% 1.2em;
+    background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                      -webkit-linear-gradient(#eee .05em, transparent .05em);
+    background-image: -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                      -moz-linear-gradient(#eee .05em, transparent .05em);
+    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                      linear-gradient(#eee .05em, transparent .05em);
+    -pie-background: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px) 0 0 / 100% 1.2em,
+                     linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
+    behavior: url(/pie/PIE.htc);
+
+    min-width: 80%;
+    height: 90vh;
+    max-width: 80%;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    box-shadow: 4px 3px 7px 2px #00000040;
+    padding: 1rem;
+}
+
+.form-input {
+    border: none;
+    outline: none;
+    border-bottom: dashed 0.2px;
+    background-color: hsla(209, 83%, 74%, 0.764);
+
+
+}
+
+.buttons{
+    font-size: 1.5rem;
+    padding: 0;
+    transform: rotate(5deg);
+    transform-origin:top;
+    font-family: 'Gochi Hand', cursive;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 hsl(198, 1%, 29%);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: hsla(209, 83%, 74%, 0.764);
+    
+}
+
+.buttons span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid hsl(198, 1%, 29%);
+}
+.buttons:active   {
+    transform: translateY(6px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+.buttons:after{
+    transform: translateY(6px);
+}
+
+
+.buttons:hover{
+
+    background-color: hsla(209, 61%, 50%, 0.764);
+}
