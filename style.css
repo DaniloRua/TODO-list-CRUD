@@ -36,6 +36,7 @@ background-image: url();
     font-size: 35px;
     background-color: hsla(209, 83%, 74%, 0.764);
     -webkit-transform: rotate(2deg);
+    border-radius: 0px 5px 5px 5px;
 }
 .todo-container{
     display: flex;
@@ -47,13 +48,12 @@ background-image: url();
     background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
     -webkit-linear-gradient(#eee .05em, transparent .05em);
   
-
-    min-width: 80%;
+    min-width: 50%;
     height: 90vh;
     max-width: 80%;
     padding-top: 2rem;
     margin-top: 2rem;
-    border-radius: 20px;
+    border-radius:5px;
     box-shadow: 4px 3px 7px 2px #00000040;
     padding: 1rem;
 }
@@ -67,19 +67,18 @@ background-image: url();
     width: 15rem;
     height: 1.9rem;
     font-size: 22px;
-
-
+    border-radius: 5px;
 }
 
 .update-button, .create-button{
     font-size: 1.5rem;
-    padding: 0;
+    padding: 0.3rem;
     transform: rotate(5deg);
     transform-origin:top;
     font-family: 'Gochi Hand', cursive;
     text-decoration: none;
     padding-bottom: 3px;
-    border-radius: 5px;
+    border-radius:5px;
     box-shadow: 0 2px 0 hsl(198, 1%, 29%);
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-color: hsla(209, 83%, 74%, 0.764);
@@ -107,10 +106,7 @@ background-image: url();
     background-color: hsla(209, 61%, 50%, 0.764);
 }
 @media only screen and (max-width: 600px) {
-    body {
-        
-     
-    }
+ 
     .button{
         display: flex;
         font-size: 20px;
@@ -120,6 +116,7 @@ background-image: url();
     .todo-container{
         background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 10px, transparent 81px),
         -webkit-linear-gradient(#eee .05em, transparent .15em);
+        width: 100vh
     
     }
 
@@ -138,14 +135,17 @@ background-image: url();
     border-bottom: dashed 0.2px;
     background-color: hsla(209, 83%, 74%, 0.764);
     width: 11rem;
-    height: 1.9rem;
-    font-size: 22px;
-
+    height: 1.5rem;
 
 }
 
     .todo-title{
         font-size: 25px;
       
+    }
+    .create-button{
+        height: 2rem;
+        font-size: 1.4rem;
+        padding: 0.1rem;
     }
   }

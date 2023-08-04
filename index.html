@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO list</title>
 </head>
-<script src="./script.js"></script>
+
 
 <body>
     <section class="todo-container">
@@ -22,16 +22,21 @@
             <form action="" class="my-form">
                 <div>
                     <input type="text" class="form-input">
-                    <span><input type="button" value="Create" class="create-button" autofocus></span>
+                    <span><input type="button" value="Create" class="create-button" autofocus onclick="createItem()"></span>
                 </div>
             </form>
 
-            <div>
+            <!-- <div>
                 <input type="text" class="form-input">
                 <span><input type="button" value="Update" class="update-button"></span>
-            </div>
+            </div> -->
         </div>
+        <div>
+        <ul class="toDoList">
+        </ul>
+    </div>
     </section>
+ 
 </body>
-
+<script src="./script.js"></script>
 </html>
