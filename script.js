@@ -7,7 +7,7 @@
 // });
 
 const form = document.querySelector(".my-form");
-let list = document.querySelector(".toDoList");
+let list = document.querySelector(".todo-list");
 let toDoItem = window.document.querySelector(".form-input")
 
 function createItem (){
@@ -19,8 +19,7 @@ function createItem (){
     li.innerText= item;
     list.appendChild(li);
     toDoItem.value = '';
-    
-   
+
 }
 
 

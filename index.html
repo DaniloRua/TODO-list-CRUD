@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="style.css">
-
+<link rel="shortcut icon" href="./assets/Checked_Checkbox-80_icon-icons.com_57358.ico" type="image/x-icon">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,10 +19,11 @@
 
         <div class="todo-inputs">
 
-            <form action="" class="my-form">
+            <form action="javascript:void(0);" class="my-form">
                 <div>
-                    <input type="text" class="form-input">
-                    <span><input type="button" value="Create" class="create-button" autofocus onclick="createItem()"></span>
+                    <input action="javascript:void(0);"type="text" class="form-input" required placeholder="New task">
+                    <span><input type="button" value="Create" class="create-button" autofocus
+                            onclick="createItem()"></span>
                 </div>
             </form>
 
@@ -31,12 +32,13 @@
                 <span><input type="button" value="Update" class="update-button"></span>
             </div> -->
         </div>
-        <div>
-        <ul class="toDoList">
-        </ul>
-    </div>
+        <div class="list-container">
+            <ul class="todo-list">
+            </ul>
+        </div>
     </section>
- 
+        
 </body>
 <script src="./script.js"></script>
+
 </html>
