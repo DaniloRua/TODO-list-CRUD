@@ -19,11 +19,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 10vh;
+    gap: 0.1rem;
 }
 
 .header-img{
-background-image: url();
+background-image: url(./assets/checkbox_checked_icon_161565.svg);
+width: 4.5rem;
+height: 4rem;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.todo-title{
+    font-size: 2.5rem;
+    background-color: hsla(209, 83%, 74%, 0.764);
+    -webkit-transform: rotate(-2deg);
+    border-radius: 0px 5px 5px 5px;
 }
 .todo-inputs{
     display: flex;
@@ -32,12 +43,7 @@ background-image: url();
     gap: 0.5rem;
 
 }
-.todo-title{
-    font-size: 35px;
-    background-color: hsla(209, 83%, 74%, 0.764);
-    -webkit-transform: rotate(2deg);
-    border-radius: 0px 5px 5px 5px;
-}
+
 .todo-container{
     display: flex;
     flex-direction: column;
@@ -48,7 +54,7 @@ background-image: url();
     background-image: -webkit-linear-gradient(#eee 0.05em, transparent .05em);
   
     min-width: 50%;
-    height: 90vh;
+    height: 100%;
     max-width: 80%;
     padding-top: 2rem;
     margin-top: 2rem;
@@ -73,9 +79,9 @@ background-image: url();
 }
 
 .update-button, .create-button{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     padding: 0.3rem;
-    transform: rotate(5deg);
+    transform: rotate(-4deg);
     transform-origin:top;
     font-family: 'Gochi Hand', cursive;
     text-decoration: none;
@@ -84,6 +90,7 @@ background-image: url();
     box-shadow: 0 2px 0 hsl(198, 1%, 29%);
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-color: hsla(209, 83%, 74%, 0.764);
+    height: 1.9rem;
     
 }
 
@@ -113,10 +120,13 @@ background-image: url();
     display: flex;
     align-items: flex-start;
     width: 90%;
+    height: 100%;
+    min-height: 100vh;
     word-break: break-all;
+    font-size: 22px;
 }
 .todo-list{
-    display: inline;
+   
 
     
   
