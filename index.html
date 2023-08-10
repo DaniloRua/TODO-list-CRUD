@@ -21,8 +21,8 @@
 
             <form action="javascript:void(0);" class="my-form">
                 <div>
-                    <input action="javascript:void(0);"type="text" class="form-input" required placeholder="New task">
-                    <span><input type="button" value="Create" class="create-button" autofocus
+                    <input action="javascript:void(0);"type="text" class="form-input"autofocus required placeholder="New task">
+                    <span><input type="button" value="Create" class="create-button" 
                             onclick="createItem()"></span>
                 </div>
             </form>
@@ -34,8 +34,11 @@
         </div>
         <div class="list-container">
             <ul class="todo-list">
-            </ul>
+            </ul>  
+           
         </div>
+        <input type="button" value="Clear list" class="clear-button" 
+        onclick="clearList()">
     </section>
         
 </body>

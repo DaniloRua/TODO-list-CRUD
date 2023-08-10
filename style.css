@@ -115,8 +115,36 @@ background-size: cover;
     background-color: hsla(209, 61%, 50%, 0.764);
 
 }
-.list-container{
+
+.clear-button{
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    transform: rotate(-4deg);
+    transform-origin:top;
+    font-family: 'Gochi Hand', cursive;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-radius:5px;
+    box-shadow: 0 2px 0 hsl(198, 1%, 29%);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: hsla(209, 83%, 74%, 0.764);
+    height: 1.9rem;
+    position: fixed;
+    bottom: 0%;
+    margin-bottom: 2rem;
     
+}
+
+.clear-button:active{
+    transform: translateY(6px);
+}
+.clear-button:after{
+    transform: translateY(6px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+
+.list-container{
     display: flex;
     align-items: flex-start;
     width: 90%;
@@ -127,11 +155,15 @@ background-size: cover;
 }
 .todo-list{
    
-
-    
   
 }
 
+.li-toggle{
+    background-color: red;
+}
+li:hover {
+    text-decoration: line-through red solid;
+}
 
 @media only screen and (max-width: 600px) {
  
