@@ -11,7 +11,7 @@ const form = document.querySelector(".my-form");
 let list = document.querySelector(".todo-list");
 let toDoItem = window.document.querySelector(".form-input");
 const button = document.querySelector(".create-button");
-
+let modal = document.querySelector(".modal");
 
 // button.addEventListener("keypress", function (event) {
 //     if (event.keyCode === 'Enter') {
@@ -21,11 +21,16 @@ const button = document.querySelector(".create-button");
 //  });
  function clearList(){
 
-list.innerHTML = ""
+if(confirm("Are you sure?")){
+    
+    list.innerHTML = "";
+}
+
  }
 
 function triggered(e){
     let element = document.getElementById(e)
+    
     element.classList.toggle("li-toggle")
 }
 function createItem() {

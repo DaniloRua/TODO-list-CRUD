@@ -50,9 +50,7 @@ background-size: cover;
     align-items: center;
     background-color: #fff;
     background-size: 100% 1.2em;
-    
     background-image: -webkit-linear-gradient(#eee 0.05em, transparent .05em);
-  
     min-width: 50%;
     height: 100%;
     max-width: 80%;
@@ -63,7 +61,32 @@ background-size: cover;
     padding: 1rem;
     gap: 1rem;
 }
-
+.modal{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(150, 150, 150, 0.534);
+    width: 100vh;
+    height: 100%;
+    top: 0;
+}
+.todo-container-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    background-size: 100% 1.2em;
+    background-image: -webkit-linear-gradient(#eee 0.05em, transparent .05em);
+    min-width: 50%;
+    height: 100%;
+    max-width: 80%;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-radius:5px;
+    box-shadow: 4px 3px 7px 2px #00000040;
+    padding: 1rem;
+    gap: 1rem;
+}
 
 .form-input {
     margin: 0.3rem;
@@ -206,5 +229,8 @@ li:hover {
         height: 2rem;
         font-size: 1.4rem;
         padding: 0.1rem;
+    }
+    li:hover {
+        text-decoration: none;
     }
   }
