@@ -10,9 +10,9 @@
 
 
 <body>
-   
+   <div id="modal" class="modal"></div>
     <section class="todo-container">
-        <div id="modal" class="modal"></div>
+        
         <div class="header">
             <div class="header-img"></div>
             <h1 class="todo-title">TO-DO List</h1>
@@ -22,23 +22,19 @@
 
             <form action="javascript:void(0);" class="my-form">
                 <div>
-                    <input action="javascript:void(0);"type="text" class="form-input"autofocus required placeholder="New task">
-                    <span><input type="button" value="Create" class="create-button" 
+                    <input action="javascript:void(0);"type="text" tabindex="-1" class="form-input" autofocus required placeholder="New task">
+                    <span><input type="button" type="submit" value="Create" alt="create-button" class="create-button" tabindex="2"
                             onclick="createItem()"></span>
                 </div>
             </form>
 
-            <!-- <div>
-                <input type="text" class="form-input">
-                <span><input type="button" value="Update" class="update-button"></span>
-            </div> -->
         </div>
         <div class="list-container">
             <ul class="todo-list">
             </ul>  
            
         </div>
-        <input type="button" value="Clear list" class="clear-button" 
+        <input type="button" tabindex="3" value="Clear list" class="clear-button" 
         onclick="clearList()">
     </section>
         

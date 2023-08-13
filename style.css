@@ -1,216 +1,183 @@
-@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
 
-*{
-
-    font-family: 'gochi hand', cursive;
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    
+* {
+  font-family: "gochi hand", cursive;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-body{
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(209, 83%, 74%, 0.764);
+  font-family: "Gochi Hand", cursive;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  gap: 0.1rem;
+}
+
+.header-img {
+  background-image: url(./assets/checkbox_checked_icon_161565.svg);
+  width: 4.5rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.todo-title {
+  font-size: 2.5rem;
+  background-color: hsla(209, 83%, 74%, 0.764);
+  -webkit-transform: rotate(-2deg);
+  border-radius: 0px 5px 5px 5px;
+}
+.todo-inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  background-size: 100% 1.2em;
+  background-image: -webkit-linear-gradient(#eee 0.05em, transparent 0.05em);
+  min-width: 50%;
+  height: 100%;
+  max-width: 80%;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+  box-shadow: 4px 3px 7px 2px #00000040;
+  padding: 1rem;
+  gap: 1rem;
+}
+.form-input {
+  margin: 0.3rem;
+  border: none;
+  outline: none;
+  border-bottom: dashed 0.2px;
+  background-color: hsla(209, 83%, 74%, 0.764);
+  width: 15rem;
+  height: 1.9rem;
+  font-size: 22px;
+  border-radius: 5px;
+  padding-left: 0.4rem;
+}
+
+.update-button,
+.create-button, .clear-button {
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  transform: rotate(-4deg);
+  transform-origin: top;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 hsl(198, 1%, 29%);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: hsla(209, 83%, 74%, 0.764);
+  height: 1.9rem;
+    width: auto;
+}
+
+.update-button span,
+.create-button span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid hsl(198, 1%, 29%);
+}
+.update-button:active,
+.create-button:active {
+  transform: translateY(6px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+.update-button:after,
+.create-button:after {
+  transform: translateY(6px);
+}
+
+.update-button:hover,
+.create-button:hover, .clear-button:hover, .form-input:hover{
+  background-color: hsla(209, 61%, 50%, 0.764);
+  transition: ease-in-out;
+}
+.update-button{
+    display: none;
+    background-image: url(./assets/3643749-edit-pen-pencil-write-writing_113397.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;  
+}
+
+.clear-button {
+  position: fixed;
+  bottom: 0%;
+  margin-bottom: 2rem;
+}
+
+.clear-button:active {
+  transform: translateY(6px);
+}
+.clear-button:after {
+  transform: translateY(6px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+
+.list-container {
+  display: flex;
+  align-items: flex-start;
+  width: 90%;
+  height: 100%;
+  min-height: 100vh;
+  word-break: break-all;
+  font-size: 22px;
+}
+
+input {
+  font-size: 22px;  
+}
+li {
+  padding: 0.2rem;
+}
+.li-toggle {
+  background-color: red;
+  text-decoration: none;
+}
+
+li:hover {
+  text-decoration: line-through red solid;
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsla(209, 83%, 74%, 0.764);
-}
+    font-size: 20px;
+  }
 
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    gap: 0.1rem;
-}
+  .todo-container {
+    background-image: -webkit-linear-gradient(#eee 0.05em, transparent 0.15em);
+    width: 100vh;
+  }
 
-.header-img{
-background-image: url(./assets/checkbox_checked_icon_161565.svg);
-width: 4.5rem;
-height: 4rem;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.todo-title{
-    font-size: 2.5rem;
-    background-color: hsla(209, 83%, 74%, 0.764);
-    -webkit-transform: rotate(-2deg);
-    border-radius: 0px 5px 5px 5px;
-}
-.todo-inputs{
+  .todo-inputs {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
+  }
 
-}
-
-.todo-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    background-size: 100% 1.2em;
-    background-image: -webkit-linear-gradient(#eee 0.05em, transparent .05em);
-    min-width: 50%;
-    height: 100%;
-    max-width: 80%;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-radius:5px;
-    box-shadow: 4px 3px 7px 2px #00000040;
-    padding: 1rem;
-    gap: 1rem;
-}
-.modal{
-    display: none;
-    z-index: 1;
-    position: absolute;
-    background-color: rgba(150, 150, 150, 0.534);
-    width: 100vh;
-    height: 100%;
-    top: 0;
-}
-.todo-container-modal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    background-size: 100% 1.2em;
-    background-image: -webkit-linear-gradient(#eee 0.05em, transparent .05em);
-    min-width: 50%;
-    height: 100%;
-    max-width: 80%;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-radius:5px;
-    box-shadow: 4px 3px 7px 2px #00000040;
-    padding: 1rem;
-    gap: 1rem;
-}
-
-.form-input {
-    margin: 0.3rem;
-    border: none;
-    outline: none;
-    border-bottom: dashed 0.2px;
-    background-color: hsla(209, 83%, 74%, 0.764);
-    width: 15rem;
-    height: 1.9rem;
-    font-size: 22px;
-    border-radius: 5px;
-   
-}
-
-.update-button, .create-button{
-    font-size: 1.1rem;
-    padding: 0.3rem;
-    transform: rotate(-4deg);
-    transform-origin:top;
-    font-family: 'Gochi Hand', cursive;
-    text-decoration: none;
-    padding-bottom: 3px;
-    border-radius:5px;
-    box-shadow: 0 2px 0 hsl(198, 1%, 29%);
-    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-color: hsla(209, 83%, 74%, 0.764);
-    height: 1.9rem;
-    
-}
-
-.update-button span, .create-button span {
-    background: #f1f5f8;
-    display: block;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 2px solid hsl(198, 1%, 29%);
-}
-.update-button:active, .create-button:active  {
-    transform: translateY(6px);
-    padding-bottom: 0px;
-    outline: 0;
-}
-.update-button:after, .create-button:after{
-    transform: translateY(6px);
-}
-
-.update-button:hover, .create-button:hover{
-
-    background-color: hsla(209, 61%, 50%, 0.764);
-
-}
-
-.clear-button{
-    font-size: 1.1rem;
-    padding: 0.3rem;
-    transform: rotate(-4deg);
-    transform-origin:top;
-    font-family: 'Gochi Hand', cursive;
-    text-decoration: none;
-    padding-bottom: 3px;
-    border-radius:5px;
-    box-shadow: 0 2px 0 hsl(198, 1%, 29%);
-    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-color: hsla(209, 83%, 74%, 0.764);
-    height: 1.9rem;
-    position: fixed;
-    bottom: 0%;
-    margin-bottom: 2rem;
-    
-}
-
-.clear-button:active{
-    transform: translateY(6px);
-}
-.clear-button:after{
-    transform: translateY(6px);
-    padding-bottom: 0px;
-    outline: 0;
-}
-
-.list-container{
-    display: flex;
-    align-items: flex-start;
-    width: 90%;
-    height: 100%;
-    min-height: 100vh;
-    word-break: break-all;
-    font-size: 22px;
-}
-.todo-list{
-   
-  
-}
-
-.li-toggle{
-    background-color: red;
-}
-li:hover {
-    text-decoration: line-through red solid;
-}
-
-@media only screen and (max-width: 600px) {
- 
-    .button{
-        display: flex;
-        font-size: 20px;
-        
-    }
-
-    .todo-container{
-        background-image:-webkit-linear-gradient(#eee .05em, transparent .15em);
-        width: 100vh
-    
-    }
-
-    .todo-inputs{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 0.5rem;
-    
-    }
-    
-.form-input {
+  .form-input {
     margin: 0.3rem;
     border: none;
     outline: none;
@@ -218,19 +185,18 @@ li:hover {
     background-color: hsla(209, 83%, 74%, 0.764);
     width: 11rem;
     height: 1.5rem;
+  }
+
+  .todo-title {
+    font-size: 25px;
+  }
+  .create-button {
+    height: 2rem;
+    font-size: 1.4rem;
+    padding: 0.1rem;
+  }
+  li:hover {
+    text-decoration: none;
+  }
 
 }
-
-    .todo-title{
-        font-size: 25px;
-      
-    }
-    .create-button{
-        height: 2rem;
-        font-size: 1.4rem;
-        padding: 0.1rem;
-    }
-    li:hover {
-        text-decoration: none;
-    }
-  }
