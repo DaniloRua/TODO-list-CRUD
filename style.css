@@ -29,6 +29,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.bottom-text{
+  position: fixed;
+  right: 1rem; bottom: 0px;
+  font-size: 13px;
+  margin-bottom: 2rem;
+  margin-right: 10rem;
+  text-align: center;
+  transform: rotate(-40deg);
+}
 .todo-title {
   font-size: 2.5rem;
   background-color: hsla(209, 83%, 74%, 0.764);
@@ -49,7 +58,7 @@ body {
   background-color: #fff;
   background-size: 100% 1.2em;
   background-image: -webkit-linear-gradient(#eee 0.05em, transparent 0.05em);
-  min-width: 50%;
+  min-width: 80%;
   height: 100%;
   max-width: 80%;
   padding-top: 2rem;
@@ -197,6 +206,22 @@ li:hover {
   }
   li:hover {
     text-decoration: none;
+  }
+  .bottom-text{
+    margin-right: 2rem;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+  .bottom-text{
+    margin-right: 3rem;
+  }
+
+}
+
+@media only screen and (max-width: 968px) {
+  .bottom-text{
+    margin-right: 4rem;
   }
 
 }
