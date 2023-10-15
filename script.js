@@ -47,21 +47,19 @@ function createItem(value) {
         alert("Enter a valid task");
         return;
     }
+    else {
+        let itemId = String(Date.now());
+        let li = document.createElement('li');
+        li.setAttribute('id', itemId);
+        li.setAttribute('onclick', "triggered(this.id)");
+        li.setAttribute('ondblclick', "dblClick(this.id)");
+        li.innerText = item;
+        list.appendChild(li);
 
-    let itemId = String(Date.now());
-    let li = document.createElement('li');
-    li.setAttribute('id', itemId);
-    li.setAttribute('onclick', "triggered(this.id)");
-    li.setAttribute('ondblclick', "dblClick(this.id)");
-    li.innerText = item;
-    list.appendChild(li);
-
-    // Clear the input field if a value was provided
-    if (value) {
+        // Clear the input field when a value was provided
         toDoItem.value = '';
+        saveItemsToLocalStorage();
     }
-
-    saveItemsToLocalStorage();
 }
 
 function saveItemsToLocalStorage() {

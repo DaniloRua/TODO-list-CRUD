@@ -29,14 +29,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.bottom-text{
+.bottom-text {
   position: fixed;
-  right: 1rem; bottom: 0px;
+  right: 0;
+  bottom: 0px;
   font-size: 13px;
-  margin-bottom: 2rem;
-  margin-right: 10rem;
+  margin-bottom: 3rem;
   text-align: center;
   transform: rotate(-40deg);
+  background-color: #eeeeee00;
 }
 .todo-title {
   font-size: 2.5rem;
@@ -82,7 +83,8 @@ body {
 }
 
 .update-button,
-.create-button, .clear-button {
+.create-button,
+.clear-button {
   font-size: 1.1rem;
   padding: 0.3rem;
   transform: rotate(-4deg);
@@ -94,7 +96,7 @@ body {
   transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background-color: hsla(209, 83%, 74%, 0.764);
   height: 1.9rem;
-    width: auto;
+  width: auto;
 }
 
 .update-button span,
@@ -117,7 +119,9 @@ body {
 }
 
 .update-button:hover,
-.create-button:hover, .clear-button:hover, .form-input:hover{
+.create-button:hover,
+.clear-button:hover,
+.form-input:hover {
   background-color: hsla(209, 61%, 50%, 0.764);
   transition: ease-in-out;
 }
@@ -146,12 +150,11 @@ body {
   word-break: break-all;
   font-size: 22px;
 }
-span{
+span {
   background-color: #eeeeee;
-  
 }
 input {
-  font-size: 22px;  
+  font-size: 22px;
 }
 li {
   padding: 0.2rem;
@@ -204,21 +207,25 @@ li:hover {
   li:hover {
     text-decoration: none;
   }
-  .bottom-text{
-    margin-right: 2rem;
-  }
+  .bottom-text {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    font-weight: 100;
 
+    text-align: center;
+    transform: rotate(-40deg);
+  }
 }
 @media only screen and (max-width: 768px) {
-  .bottom-text{
-    margin-right: 3rem;
+  .bottom-text {
+    margin-left: 5rem;
   }
-
 }
 
 @media only screen and (max-width: 968px) {
-  .bottom-text{
-    margin-right: 4rem;
+  .bottom-text {
+    margin-right: 5rem;
   }
-
 }
