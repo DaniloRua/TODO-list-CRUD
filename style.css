@@ -148,10 +148,10 @@ body {
   height: 100%;
   min-height: 100vh;
   word-break: break-all;
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 span {
-  background-color: #eeeeee;
+  background-color: #ddbbbb;
 }
 input {
   font-size: 22px;
@@ -160,12 +160,17 @@ li {
   padding: 0.2rem;
 }
 .li-toggle {
-  background-color: red;
+  background-color: rgb(219, 104, 104);
+  border-radius: 5px;
+  
+}
+
+.li-toggle:hover{
   text-decoration: none;
 }
 
 li:hover {
-  text-decoration: line-through red solid;
+  text-decoration: line-through rgb(150, 4, 4) solid;
 }
 
 @media only screen and (max-width: 600px) {
